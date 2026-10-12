@@ -1,0 +1,10 @@
+name: Hello
+on:
+  schedule:
+    - cron: '0 9 * * *'      # 每天 9:00 UTC（北京时间 17:00）自动触发
+  workflow_dispatch:          # 也允许你在 GitHub 网页上手动点"运行"
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "你好，今天也要加油！"
